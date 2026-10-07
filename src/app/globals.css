@@ -116,7 +116,7 @@ body {
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: var(--txt);
   -webkit-text-fill-color: transparent;
   animation: hueShift 7s linear infinite, glitchBase var(--glitch-cycle) infinite;
   cursor: pointer;
