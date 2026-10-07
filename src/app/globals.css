@@ -181,7 +181,7 @@ body {
 @keyframes glitchBase {
   0%,
   100% {
-    text-shadow: 0 0 22px rgba(0, 229, 255, 0.35), 0 0 70px rgba(139, 92, 246, 0.22);
+    text-shadow: none;
     transform: none;
   }
   4% {
@@ -266,13 +266,15 @@ body {
   }
   50% {
     transform: translateX(-3px) skewX(-4deg);
+    text-shadow: none;
   }
   75% {
     transform: translateX(3px);
+    text-shadow: none;
   }
   100% {
     transform: none;
-    text-shadow: 0 0 22px rgba(0, 229, 255, 0.35);
+    text-shadow: none;
   }
 }
 
