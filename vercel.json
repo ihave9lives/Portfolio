@@ -19,5 +19,11 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/Sashankar_J_Resume.pdf",
+      "destination": "/Sashankar_J_Resume.pdf"
+    }
   ]
 }
