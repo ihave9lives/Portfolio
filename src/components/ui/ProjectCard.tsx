@@ -49,14 +49,14 @@ export default function ProjectCard({ title, description, tags, link, repoUrl }:
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       whileHover={{ scale: 1.02 }}
-      className="interactive cursor-pointer relative w-full h-full rounded-2xl glass-card p-6 flex flex-col justify-between overflow-hidden group transition-all duration-300 hover-glow"
+      className="card cursor-pointer relative w-full h-full rounded-2xl p-6 flex flex-col justify-between overflow-hidden group transition-all duration-300"
     >
       {/* Shimmer effect */}
       <div className="absolute inset-0 z-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-x-[-100%] group-hover:translate-x-[100%] ease-in-out" />
-      
+
       <div className="relative z-10" style={{ transform: "translateZ(30px)" }}>
         <div className="flex justify-between items-start mb-4">
-          <h3 className="text-2xl font-bold text-white">{title}</h3>
+          <h3 className="text-xl font-bold text-white font-mono tracking-tight">{title}</h3>
           <div className="flex gap-2">
             {repoUrl && (
               <motion.div
@@ -67,7 +67,7 @@ export default function ProjectCard({ title, description, tags, link, repoUrl }:
                 <FaGithub className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors" />
               </motion.div>
             )}
-            <motion.div 
+            <motion.div
               className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm"
               whileHover={{ scale: 1.1 }}
             >
@@ -75,7 +75,7 @@ export default function ProjectCard({ title, description, tags, link, repoUrl }:
             </motion.div>
           </div>
         </div>
-        <p className="text-gray-300 text-sm leading-relaxed mb-6">
+        <p className="text-gray-300 text-sm leading-relaxed mb-6 line-clamp-3">
           {description}
         </p>
       </div>
@@ -84,7 +84,7 @@ export default function ProjectCard({ title, description, tags, link, repoUrl }:
         {tags.map((tag, i) => (
           <span
             key={i}
-            className="text-xs px-3 py-1 rounded-full bg-white/10 text-sky-200 border border-white/5"
+            className="text-xs px-3 py-1 rounded-full bg-white/10 text-sky-200 border border-white/5 font-mono"
           >
             {tag}
           </span>

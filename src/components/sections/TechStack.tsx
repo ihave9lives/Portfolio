@@ -31,22 +31,22 @@ export default function TechStack() {
   return (
     <section className="py-24 px-6 md:px-24 relative z-10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 tracking-tight text-center">
-          Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-500">Arsenal</span>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 tracking-tight text-center font-mono tracking-wider">
+          TECHNICAL <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-500 to-pink-500">ARSENAL</span>
         </h2>
-        
-        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+
+        <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
           {technologies.map((tech, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.05, duration: 0.5 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="interactive px-6 py-3 rounded-xl glass-panel text-gray-200 font-medium hover-glow border border-white/5 cursor-default flex flex-col items-center justify-center min-w-[120px]"
+              transition={{ delay: index * 0.03, duration: 0.4 }}
+              whileHover={{ scale: 1.05, y: -3 }}
+              className="btn btn-glass px-5 py-2.5 rounded-lg text-sm font-medium cursor-default flex flex-col items-center justify-center min-w-[110px] group"
             >
-              <span className="text-xs text-sky-400 mb-1 font-semibold uppercase tracking-wider">{tech.category}</span>
-              <span className="text-lg">{tech.name}</span>
+              <span className="text-xs text-cyan-400 mb-0.5 font-semibold uppercase tracking-wider font-mono">{tech.category}</span>
+              <span className="text-base font-mono tracking-tight">{tech.name}</span>
             </motion.div>
           ))}
         </div>
