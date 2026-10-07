@@ -185,21 +185,17 @@ body {
     transform: none;
   }
   4% {
-    text-shadow: -4px 0 var(--mag), 4px 0 var(--cyan);
     transform: translateX(2px) skewX(-3deg);
   }
   8% {
-    text-shadow: 3px 0 var(--mag), -3px 0 var(--cyan);
     transform: translateX(-2px);
   }
   12% {
-    text-shadow: -2px 0 var(--mag), 2px 0 var(--cyan);
     transform: skewX(2deg);
   }
   16%,
   96% {
     transform: none;
-    text-shadow: 0 0 22px rgba(0, 229, 255, 0.35);
   }
 }
 
@@ -258,23 +254,18 @@ body {
 @keyframes glitchMega {
   0% {
     transform: translateX(-6px) skewX(-8deg);
-    text-shadow: -8px 0 var(--mag), 8px 0 var(--cyan);
   }
   25% {
     transform: translateX(6px) skewX(6deg);
-    text-shadow: 6px 0 var(--mag), -6px 0 var(--cyan);
   }
   50% {
     transform: translateX(-3px) skewX(-4deg);
-    text-shadow: none;
   }
   75% {
     transform: translateX(3px);
-    text-shadow: none;
   }
   100% {
     transform: none;
-    text-shadow: none;
   }
 }
 
