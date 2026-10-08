@@ -10,7 +10,20 @@ interface ThemeContextType {
   themes: { id: Theme; name: string; icon: string }[];
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const defaultTheme: Theme = "cyberpunk";
+
+const ThemeContext = createContext<ThemeContextType>({
+  theme: defaultTheme,
+  setTheme: () => {},
+  themes: [
+    { id: "cyberpunk" as Theme, name: "Cyberpunk", icon: "⚡" },
+    { id: "light" as Theme, name: "Light", icon: "☀️" },
+    { id: "synthwave" as Theme, name: "Synthwave", icon: "🌅" },
+    { id: "matrix" as Theme, name: "Matrix", icon: "🌿" },
+    { id: "tokyo-night" as Theme, name: "Tokyo Night", icon: "🌃" },
+    { id: "amber-crt" as Theme, name: "Amber CRT", icon: "📺" },
+  ],
+});
 
 const themes = [
   { id: "cyberpunk" as Theme, name: "Cyberpunk", icon: "⚡" },
@@ -29,7 +42,7 @@ declare global {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("cyberpunk");
+  const [theme, setThemeState] = useState<Theme>(defaultTheme);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -66,7 +79,12 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   };
 
   if (!mounted) {
-    return <>{children}</>;
+    // During static generation, provide default theme
+    return (
+      <ThemeContext.Provider value={{ theme: defaultTheme, setTheme: () => {}, themes }}>
+        {children}
+      </ThemeContext.Provider>
+    );
   }
 
   return (
