@@ -21,6 +21,13 @@ const themes = [
   { id: "amber-crt" as Theme, name: "Amber CRT", icon: "📺" },
 ];
 
+// Extend Window interface for easter egg tracking
+declare global {
+  interface Window {
+    __themeSwitchCount?: number;
+  }
+}
+
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<Theme>("cyberpunk");
   const [mounted, setMounted] = useState(false);
