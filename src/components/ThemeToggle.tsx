@@ -7,6 +7,12 @@ import { useTheme } from "@/components/ThemeProvider";
 export default function ThemeToggle() {
   const { theme, setTheme, themes } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Check if we're in a ThemeProvider context
+  if (!theme) {
+    return null;
+  }
 
   return (
     <div className="relative">
