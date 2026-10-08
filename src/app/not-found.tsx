@@ -12,7 +12,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
-          className="btn btn-primary inline-flex items-center gap-2"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium font-mono text-sm bg-gradient-to-r from-cyan-500 to-violet-600 text-black hover:from-cyan-400 hover:to-violet-500 transition-all duration-200"
         >
           <span>← Back to Grid</span>
         </Link>
