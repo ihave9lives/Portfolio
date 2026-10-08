@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${orbitron.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${orbitron.className} ${spaceGrotesk.className} ${jetbrainsMono.className}`} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -69,7 +69,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${spaceGrotesk.className} antialiased`} style={{ overflowX: "hidden" }}>
+      <body className="antialiased" style={{ overflowX: "hidden" }}>
         <div id="net" className="fixed inset-0 z-[-3] pointer-events-none" />
         <div className="noise fixed inset-0 z-[-2] pointer-events-none" />
         <div className="scanlines fixed inset-0 z-[2] pointer-events-none" />
