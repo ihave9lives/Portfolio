@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Terminal, Zap, Coffee, Gamepad2, Skull, Ghost, Sparkles } from "lucide-react";
+import { X, Terminal, Zap, Coffee, Gamepad2, Skull, Ghost as LucideGhost, Sparkles } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 
 const KONAMI_CODE = [
@@ -418,14 +418,14 @@ function GhostMode({ onClose }: { onClose: () => void }) {
       onClick={onClose}
     >
       {ghosts.map(ghost => (
-        <Ghost key={ghost.id} {...ghost} />
+        <GhostParticle key={ghost.id} {...ghost} />
       ))}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         className="fixed bottom-10 left-1/2 -translate-x-1/2 text-center pointer-events-auto"
       >
-        <Ghost className="w-24 h-24 mx-auto mb-4 text-white/80" />
+        <GhostIcon className="w-24 h-24 mx-auto mb-4 text-white/80" />
         <p className="text-white font-mono text-lg">👻 GHOST MODE ACTIVATED 👻</p>
         <p className="text-gray-400 text-sm mt-2">Click anywhere to return to reality</p>
       </motion.div>
@@ -433,7 +433,7 @@ function GhostMode({ onClose }: { onClose: () => void }) {
   );
 }
 
-function Ghost({ id, x, y, size, speed, delay, opacity }: {
+function GhostParticle({ id, x, y, size, speed, delay, opacity }: {
   id: number;
   x: number;
   y: number;
