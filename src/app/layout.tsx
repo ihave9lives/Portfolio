@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Orbitron, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
-import ThemeProvider from "@/components/ThemeProvider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import EasterEggs from "@/components/EasterEggs";
 
 const orbitron = Orbitron({
