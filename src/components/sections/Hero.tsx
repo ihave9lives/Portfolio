@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Terminal, Rocket, FileText, Mail, Phone, Copy, CheckCircle2, ExternalLink, Github, Linkedin } from "lucide-react";
+import { Terminal, Rocket, FileText, Mail, Phone, Copy, CheckCircle2, ExternalLink, Github as LucideGithub } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { personalLinks } from "@/data/projects";
 import Modal from "@/components/ui/Modal";
 import { useTheme } from "@/components/ThemeProvider";
@@ -234,28 +235,28 @@ export default function Hero() {
           </motion.button>
 
           <motion.a
-            href={personalLinks.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="btn btn-glass flex items-center gap-2"
-          >
-            <Github className="w-4 h-4" />
-            <span>GitHub</span>
-          </motion.a>
+                      href={personalLinks.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="btn btn-glass flex items-center gap-2"
+                    >
+                      <FaGithub className="w-4 h-4" />
+                      <span>GitHub</span>
+                    </motion.a>
 
-          <motion.a
-            href={personalLinks.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="btn btn-glass flex items-center gap-2"
-          >
-            <Linkedin className="w-4 h-4" />
-            <span>LinkedIn</span>
-          </motion.a>
+                    <motion.a
+                      href={personalLinks.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="btn btn-glass flex items-center gap-2"
+                    >
+                      <FaLinkedin className="w-4 h-4" />
+                      <span>LinkedIn</span>
+                    </motion.a>
         </div>
 
         {/* Quick copy section */}
@@ -374,11 +375,11 @@ export default function Hero() {
           </div>
 
           <div className="flex items-center gap-3 p-3 glass-panel rounded-lg">
-            <Github className="w-5 h-5 text-cyan-400" />
-            <div>
-              <p className="text-gray-400 text-xs">GitHub</p>
-              <p className="font-mono text-white">github.com/ihave9lives</p>
-            </div>
+                      <FaGithub className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <p className="text-gray-400 text-xs">GitHub</p>
+                        <p className="font-mono text-white">github.com/ihave9lives</p>
+                      </div>
             <motion.a
               href={personalLinks.github}
               target="_blank"
@@ -393,11 +394,11 @@ export default function Hero() {
           </div>
 
           <div className="flex items-center gap-3 p-3 glass-panel rounded-lg">
-            <Linkedin className="w-5 h-5 text-cyan-400" />
-            <div>
-              <p className="text-gray-400 text-xs">LinkedIn</p>
-              <p className="font-mono text-white">linkedin.com/in/sashankar-j</p>
-            </div>
+                      <FaLinkedin className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <p className="text-gray-400 text-xs">LinkedIn</p>
+                        <p className="font-mono text-white">linkedin.com/in/sashankar-j</p>
+                      </div>
             <motion.a
               href={personalLinks.linkedin}
               target="_blank"
