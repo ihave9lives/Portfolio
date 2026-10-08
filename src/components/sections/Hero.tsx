@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Terminal, Rocket, FileText, Mail, Phone, Copy, CheckCircle2, ExternalLink, Github as LucideGithub } from "lucide-react";
+import { Terminal, Rocket, FileText, Mail, Phone, Copy, CheckCircle2, ExternalLink } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { personalLinks } from "@/data/projects";
 import Modal from "@/components/ui/Modal";
