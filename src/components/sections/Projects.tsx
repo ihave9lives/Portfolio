@@ -1,5 +1,6 @@
 import ProjectCard from "@/components/ui/ProjectCard";
 import { projectsData } from "@/data/projects";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   // Split projects into "Fun" and "Professional" categories
